@@ -8,6 +8,7 @@ export default function Starfield() {
 
   useEffect(() => {
     const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x000000);
     const camera = new THREE.PerspectiveCamera(
       75,
       window.innerWidth / window.innerHeight,
@@ -90,14 +91,6 @@ export default function Starfield() {
   return (
     <div
       ref={mountRef}
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        zIndex: -1,
-        width: "100%",
-        height: "100%",
-      }}
-    />
-  );
+      style={{position: "fixed", top: 0, left: 0, zIndex: -1, width: "100%", height: "100%",}} 
+    />);
 }
